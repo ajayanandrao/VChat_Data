@@ -1,0 +1,66 @@
+@import "./../Mixin_New.scss";
+
+.card-grid-center {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.card-main-div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    max-width: 900px;
+
+    @include respond-to(md) {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: calc(900px - 225px);
+    }
+
+    @include respond-to(sm) {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: calc(900px - 225px);
+        grid-gap: 10px;
+    }
+
+    @include respond-to(xs) {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: calc(900px - 225px * 2);
+        grid-gap: 5px;
+    }
+}
+
+.movie-card {
+    width: 100%;
+    max-width: 225px;
+    height: 280px;
+    border-radius: 10px;
+    background: #404855;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    @include respond-to(xs) {
+        max-height: 260px;
+    }
+
+    .movie-card-name-div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        padding: 0.5rem;
+
+        .movie-name {
+            text-transform: capitalize;
+            font-size: 18px;
+            @include respond-to(xs) {
+                font-size: 18px;
+            }
+        }
+    }
+}

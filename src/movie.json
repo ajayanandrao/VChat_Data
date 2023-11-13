@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "thor",
+        "company": "Marval Studio",
+        "language":"English / Hindi",
+        "s1": "1",
+        "s2": "2",
+        "s3": "3",
+        "s4": "4"
+    },
+    {
+        "id": 2,
+        "name": "loki",
+        "company": "Marval Studio",
+        "language":"English / Hindi",
+        "s1": "1",
+        "s2": "2",
+        "s3": "3",
+        "s4": "4"
+    },
+    {
+        "id": 3,
+        "name": "iron man",
+        "company": "Marval Studio",
+        "language":"English / Hindi",
+        "s1": "1",
+        "s2": "2",
+        "s3": "3",
+        "s4": "4"
+    },
+    {
+        "id": 4,
+        "name": "avenger",
+        "company": "Marval Studio",
+        "language":"English / Hindi",
+        "s1": "1",
+        "s2": "2",
+        "s3": "3",
+        "s4": "4"
+    },
+    {
+        "id": 5,
+        "name": "avatar",
+        "company": "Marval Studio",
+        "language":"English / Hindi",
+        "s1": "1",
+        "s2": "2",
+        "s3": "3",
+        "s4": "4"
+    },
+    {
+        "id": 6,
+        "name": "capton marval",
+        "company": "Marval Studio",
+        "language":"English / Hindi",
+        "s1": "1",
+        "s2": "2",
+        "s3": "3",
+        "s4": "4"
+    },
+    {
+        "id": 7,
+        "name": "transformar",
+        "company": "Marval Studio",
+        "language":"English / Hindi",
+        "s1": "1",
+        "s2": "2",
+        "s3": "3",
+        "s4": "4"
+    },
+    {
+        "id": 8,
+        "name": "game of thron",
+        "company": "Marval Studio",
+        "language":"English / Hindi",
+        "s1": "1",
+        "s2": "2",
+        "s3": "3",
+        "s4": "4"
+    }
+]
