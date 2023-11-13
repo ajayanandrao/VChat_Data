@@ -4,7 +4,7 @@ import logo from "./../logo192.png"
 import LeftArro from '../LeftArro';
 import { useState } from 'react';
 import { db, storage } from "./../Firebase";
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { BsFillCameraFill } from "react-icons/bs"
 import { getDownloadURL, ref, uploadBytes, uploadBytesResumable } from 'firebase/storage';
 import { v4 } from 'uuid';
@@ -20,6 +20,8 @@ const AddHospitals = () => {
     const [taluka, setTaluka] = useState("");
     const [distic, setDistic] = useState("");
     const [pin, setPin] = useState("");
+    const [am, setAm] = useState("");
+    const [pm, setPm] = useState("");
 
     const [overlay, setOverlay] = useState(false);
 
@@ -74,11 +76,13 @@ const AddHospitals = () => {
                                     hospitalName: hname,
                                     doctorName: doctorName,
                                     qualification: quali,
+                                    time: `${am}am To ${pm}pm`,
                                     contact: contact,
                                     address: address,
                                     taluka: taluka,
                                     distic: distic,
-                                    pin: pin
+                                    pin: pin,
+                                    timestamp: serverTimestamp()
                                 });
                                 setOverlay(true);
                             });
@@ -92,7 +96,7 @@ const AddHospitals = () => {
                 }
             }
         }
-        
+
     };
 
     const Overlay = () => {
@@ -106,6 +110,8 @@ const AddHospitals = () => {
         setTaluka("");
         setDistic("");
         setPin("");
+        setAm("");
+        setPm("");
         setOverlay(!overlay);
     }
 
@@ -176,6 +182,12 @@ const AddHospitals = () => {
                         <div className="addHospital-item-div text-lightProfileName dark:text-darkProfileName">
                             <div className="addHostpital-item-category">Contact</div>
                             <input type="text" placeholder='Contact' className='addHospital-input bg-bg-lightDiv text-lightProfileName dark:bg-darkInput dark:text-darkProfileName' value={contact} onChange={(e) => setContact(e.target.value)} />
+                        </div>
+                        <div className="addHospital-item-div text-lightProfileName dark:text-darkProfileName">
+                            <div className="addHostpital-item-category">Time</div>
+                            <input type="text" placeholder='Am' style={{ maxWidth: "130px" }} className='addHospital-input bg-bg-lightDiv text-lightProfileName dark:bg-darkInput dark:text-darkProfileName' value={am} onChange={(e) => setAm(e.target.value)} />
+                            <div style={{ color: "black", margin: "0 10px" }}>To</div>
+                            <input type="text" placeholder='Pm' style={{ maxWidth: "130px" }} className='addHospital-input bg-bg-lightDiv text-lightProfileName dark:bg-darkInput dark:text-darkProfileName' value={pm} onChange={(e) => setPm(e.target.value)} />
                         </div>
                         <div className="addHospital-item-div text-lightProfileName dark:text-darkProfileName">
                             <div className="addHostpital-item-category">Address</div>
