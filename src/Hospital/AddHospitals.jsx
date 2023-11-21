@@ -7,6 +7,7 @@ import { db, storage } from "./../Firebase";
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { BsFillCameraFill } from "react-icons/bs"
 import { getDownloadURL, ref, uploadBytes, uploadBytesResumable } from 'firebase/storage';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const AddHospitals = () => {
 
@@ -51,7 +52,12 @@ const AddHospitals = () => {
         });
     };
 
+
+    const [progress, setProgress] = useState(false)
+
     const handleSubmit = async () => {
+
+        setProgress(true);
 
         if (image && hname && contact && address && taluka && distic && state) {
             if (image.type.startsWith('image/')) {
@@ -85,6 +91,7 @@ const AddHospitals = () => {
                                     pin: pin,
                                     timestamp: serverTimestamp()
                                 });
+                                setProgress(false);
                                 setOverlay(true);
                             });
                         }
@@ -118,6 +125,7 @@ const AddHospitals = () => {
         setAm("");
         setPm("");
         setOverlay(!overlay);
+        setProgress(false);
     }
 
 
@@ -225,11 +233,25 @@ const AddHospitals = () => {
                         </div>
                         <div className="addHospital-item-div text-lightProfileName dark:text-darkProfileName">
                             <div className="addHostpital-item-category"></div>
-                            <button className='btn btn-primary ' onClick={handleSubmit}>Submit</button>
+
+                            {progress ?
+                                <div className="saveLodingBtn">
+                                    <CircularProgress className='loadingCircul' />
+                                </div>
+                                :
+                                <button className='btn btn-primary ' onClick={handleSubmit}>
+                                    Submit
+                                </button>
+                            }
+
+
+
+
                         </div>
                     </div>
                 </div>
                 <div className="margin"></div>
+
 
             </div>
         </div>

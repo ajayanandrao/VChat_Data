@@ -288,3 +288,17 @@
         }
     }
 }
+
+.saveLodingBtn {
+    background: #0D6EFD;
+    border-radius: 6px;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 8px;
+
+    .loadingCircul {
+        color: white;
+        width: 25px !important;
+        height: 25px !important;
+    }
+}
