@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/VChat_Data/static/css/main.259e91d7.css",
-    "main.js": "/VChat_Data/static/js/main.5adbdec6.js",
+    "main.css": "/VChat_Data/static/css/main.42daef6e.css",
+    "main.js": "/VChat_Data/static/js/main.0806fee5.js",
     "static/js/27.87965f17.chunk.js": "/VChat_Data/static/js/27.87965f17.chunk.js",
     "static/media/logo192.png": "/VChat_Data/static/media/logo192.052f2e1cfd165966b477.png",
     "index.html": "/VChat_Data/index.html"
   },
   "entrypoints": [
-    "static/css/main.259e91d7.css",
-    "static/js/main.5adbdec6.js"
+    "static/css/main.42daef6e.css",
+    "static/js/main.0806fee5.js"
   ]
 }
