@@ -28,17 +28,17 @@ import "@firebase/firestore";
 //   apiKey: "AIzaSyA9a35tXxnbm1E3TMN7edzw03HEG9cjFGY",
 //   authDomain: "hosting-c26ea.firebaseapp.com",
 //   projectId: "hosting-c26ea",
-//   storageBucket: "hosting-c26ea.appspot.com",
+//   storageBucket: "hosting-c26ea.appspot.com",  
 //   messagingSenderId: "492233370812",
 //   appId: "1:492233370812:web:f4d7d98bd15b40f50db4b9"
 // };
 const firebaseConfig = {
-  apiKey: "AIzaSyBQgBsiuvXbHY3qQoMSjgIJZDdl3mSXW30",
-  authDomain: "golden-6f464.firebaseapp.com",
-  projectId: "golden-6f464",
-  storageBucket: "golden-6f464.appspot.com",
-  messagingSenderId: "738995552673",
-  appId: "1:738995552673:web:cee7cd87eecc6130214be0"
+  apiKey: "AIzaSyA9a35tXxnbm1E3TMN7edzw03HEG9cjFGY",
+  authDomain: "hosting-c26ea.firebaseapp.com",
+  projectId: "hosting-c26ea",
+  storageBucket: "hosting-c26ea.appspot.com",
+  messagingSenderId: "492233370812",
+  appId: "1:492233370812:web:f4d7d98bd15b40f50db4b9"
 };
 
 

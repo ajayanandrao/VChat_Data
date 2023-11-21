@@ -60,13 +60,14 @@
         width: 80px;
         // max-width: 500px;
         height: 80px;
-        background: white;
+        // background: white;
         border-radius: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
         cursor: pointer;
+        margin-bottom: 30px;
 
         .image-icon {
             font-size: 40px;
@@ -212,8 +213,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                background: white;
-                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
                 @include respond-to(xs) {
                     padding: 0 1rem;
@@ -226,21 +226,28 @@
                     justify-content: space-between;
                     width: 100%;
                     max-width: 430px;
+                    color: black;
 
 
                     .addHostpital-item-category {
-                        width: 150px;
+                        width: 130px;
                         text-transform: capitalize;
                         font-weight: 600;
-                        color: black;
+                        // color: black;
+                        display: flex;
+                        justify-content: start;
+                        align-items: start;
+                        text-align: start;
+                        // background: red;
 
                         @include respond-to(xs) {
-                            width: 140px;
+                            width: 115px;
                             margin-right: 1rem;
                         }
                     }
 
                     .addHospital-input {
+                        flex: 1;
                         height: 40px;
                         width: 100%;
                         max-width: 300px;
@@ -252,6 +259,22 @@
 
                         @include respond-to(xs) {
                             max-width: 100%;
+                        }
+                    }
+
+                    .time-am {
+                        max-width: 135px;
+
+                        @include respond-to(xs) {
+                            max-width: 100px;
+                        }
+                    }
+
+                    .time-pm {
+                        max-width: 135px;
+
+                        @include respond-to(xs) {
+                            max-width: 100px;
                         }
                     }
 
