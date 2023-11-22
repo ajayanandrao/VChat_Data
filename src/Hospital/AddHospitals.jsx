@@ -132,7 +132,7 @@ const AddHospitals = () => {
 
     return (
         <div className='addHospital-main-container '>
-            <LeftArro />
+            {/* <LeftArro /> */}
             <div className="left"></div>
             <div className="addHospital-container">
                 {overlay ?
